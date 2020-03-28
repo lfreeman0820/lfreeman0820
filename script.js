@@ -1,9 +1,9 @@
 var numberCharacters = [ "0", "1", "2", "3", "4", "5", "6", "7", "8"];
-var upperCaseCharacters = [ "A", "B", "C", "3", "4", "5", "6", "7", "8"];
-var lowerCaseCharacters = [ "a", "b", "c", "3", "4", "5", "6", "7", "8"];
+var upperCaseCharacters = [ "A", "B", "C", "D", "E", "F", "G", "H", "I", "J", "K", "L", "M", "N", "O", "P", "Q", "R", "S", "T", "U", "V", "W", "X", "Y", "Z"];
+var lowerCaseCharacters = [ "a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r", "s", "t", "u", "v", "w", "x", "y", "z"];
 var specialCharacters = ['@','%','+','\\','/',"'",'!','#','$','^','?',':',',',')','(','}','{',']','[',
 '~','-','_','.'];
-// Fill in the rest of the ABCs and abcs above
+
 
 
 function passwordChoices () {
@@ -56,7 +56,19 @@ var store2Character = []
 if (selectedChoices.gotNumberCharacters) {
   store1Character = store1Character.concat(gotNumberCharacters);
   store2Character.push(myRandom(gotNumberCharacters))
-  
+
+if (selectedChoices.gotUpperCaseCharacters) {
+    store1Character = store1Character.concat(gotUpperCaseCharacters);
+    store2Character.push(myRandom(gotUpperCaseCharacters))
+}
+if (selectedChoices.gotLowerCaseCharacters) {
+      store1Character = store1Character.concat(gotLowerCaseCharacter);
+      store2Character.push(myRandom(gotLowerCaseCharacter))
+}    
+if (selectedChoices.gotSpecialCharacters) {
+        store1Character = store1Character.concat(gotSpecialCharacters);
+        store2Character.push(myRandom(gotSpecialCharacters))
+                   
 }
 // do if statements one for uppercase, lowercase and special above!
 
@@ -70,7 +82,7 @@ for (i = 0; i < store2Character.length; i++) {
 }
 return result.join("")
 
-}
+}}
 
 
 
