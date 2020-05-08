@@ -52,37 +52,28 @@ function generatePassword() {
 var selectedChoices = passwordChoices ()
 var result = []
 var store1Character = []
-var store2Character = []
+
 if (selectedChoices.gotNumberCharacters) {
-  store1Character = store1Character.concat(gotNumberCharacters);
-  store2Character.push(myRandom(gotNumberCharacters))
+  store1Character = store1Character.concat(numberCharacters);
+}
 
 if (selectedChoices.gotUpperCaseCharacters) {
-    store1Character = store1Character.concat(gotUpperCaseCharacters);
-    store2Character.push(myRandom(gotUpperCaseCharacters))
+    store1Character = store1Character.concat(upperCaseCharacters);
 }
 if (selectedChoices.gotLowerCaseCharacters) {
-      store1Character = store1Character.concat(gotLowerCaseCharacter);
-      store2Character.push(myRandom(gotLowerCaseCharacter))
+      store1Character = store1Character.concat(upperCaseCharacters);
 }    
 if (selectedChoices.gotSpecialCharacters) {
-        store1Character = store1Character.concat(gotSpecialCharacters);
-        store2Character.push(myRandom(gotSpecialCharacters))
-                   
+        store1Character = store1Character.concat(specialCharacters);               
 }
 // do if statements one for uppercase, lowercase and special above!
-
+console.log(store1Character)
 for (i = 0; i < selectedChoices.length; i++) {
-  var store1Character = myRandom(store1Character)
-  result.push(store1Character)
-}
-
-for (i = 0; i < store2Character.length; i++) {
-  result[i] = store2Character[i];
+ result.push(myRandom(store1Character)) 
 }
 return result.join("")
 
-}}
+}
 
 
 
